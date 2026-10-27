@@ -1475,6 +1475,18 @@
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.27.12.tgz#0cacd3cff047a32936b1ace47ea7c86eaab60a7f"
   integrity sha512-hhyNJ+nbR6ZR7pToHvllEFun9TL0sbL+tk/ON75lo+Xas054uez98qRbsuNt7MBCyZKK4+8Yli/OAGZhmfBZ/g==
 
+"@tanstack/query-core@5.105.0":
+  version "5.105.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.105.0.tgz#c3bbf51a664d4af09b2f404b2595ccdc9a743021"
+  integrity sha512-7p56vRmT/z4UJ6sctGIdl5WRUQyUv53IUpUwEKi2g97zMbO7zh8ZsCLffGAvCPBR4xD72e3VXsDyLwXHhoNTMQ==
+
+"@tanstack/react-query@^5.105.0":
+  version "5.105.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.105.0.tgz#16605f0d0fcae9d179071cf48434c4adc4a59497"
+  integrity sha512-y+hMuDERvgg6ay1da0V1a6ZC0ZONt7dELxSFkqRZuwm7p1TTZs0MoXrPlBRflIpRoYjvzQVYxycnLImpFLhWrw==
+  dependencies:
+    "@tanstack/query-core" "5.105.0"
+
 "@tybys/wasm-util@^0.10.3":
   version "0.10.4"
   resolved "https://registry.yarnpkg.com/@tybys/wasm-util/-/wasm-util-0.10.4.tgz#3e85ecb266f9d1722250e89bc69528615720b154"
@@ -3114,6 +3126,11 @@ expo-router@~57.0.29:
     shallowequal "^1.1.0"
     standard-navigation "^0.0.5"
     vaul "^1.1.2"
+
+expo-secure-store@~57.0.4:
+  version "57.0.4"
+  resolved "https://registry.yarnpkg.com/expo-secure-store/-/expo-secure-store-57.0.4.tgz#a5eefc7490d1de26fd62e83bc5fdceacd94f5342"
+  integrity sha512-7zBA1RThURTXdP4w65kBzZNbcSsfArqVd+p+ETAnPRWXO8J296Qd0YaCVyRpJ0HSwlCnGdvOnqO+NgSreHsOhA==
 
 expo-server@^57.0.3:
   version "57.0.3"

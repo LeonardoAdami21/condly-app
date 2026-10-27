@@ -12,18 +12,26 @@ type ScreenProps = {
   scroll?: boolean;
   /** Bordas que respeitam a área segura (notch, barra de gestos). */
   edges?: Edge[];
+  /** Centraliza o conteúdo na vertical (ex.: telas de login). */
+  centered?: boolean;
 };
 
 /**
  * Container base de toda tela: aplica fundo do tema, área segura, padding lateral
  * conforme o tamanho da tela, largura máxima centralizada em tablets e ajuste do teclado.
  */
-export function Screen({ children, scroll = true, edges = ['top', 'bottom'] }: ScreenProps) {
+export function Screen({
+  children,
+  scroll = true,
+  edges = ['top', 'bottom'],
+  centered = false,
+}: ScreenProps) {
   const theme = useTheme();
   const { horizontalPadding, isShort } = useResponsive();
 
   const contentStyle = [
     styles.content,
+    centered && styles.centered,
     { paddingHorizontal: horizontalPadding, paddingVertical: isShort ? Spacing.three : Spacing.four },
   ];
 
@@ -59,5 +67,9 @@ const styles = StyleSheet.create({
     maxWidth: MaxContentWidth,
     alignSelf: 'center',
     gap: Spacing.three,
+  },
+  centered: {
+    flexGrow: 1,
+    justifyContent: 'center',
   },
 });
