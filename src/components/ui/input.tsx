@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type Ref } from 'react';
 import { StyleSheet, TextInput, View, type TextInputProps } from 'react-native';
 
 import { ThemedText } from '@/components/themed-text';
@@ -6,6 +6,7 @@ import { MaxFontScale, MinTouchSize, Radius, Spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
 
 type InputProps = TextInputProps & {
+  ref?: Ref<TextInput>;
   label?: string;
   error?: string;
 };
